@@ -1,0 +1,422 @@
+mongoose.c:1391:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ envblk = NULL; /* unused */
+ ^
+mongoose.c:3951:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ line = 0; /* Unused */
+ ^
+mongoose.c:3952:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ file = NULL; /* Unused */
+ ^
+mongoose.c:4090:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ ctx = NULL;
+ ^
+mongoose.c:4423:35: style: Redundant condition: ri->http_version_major==1. 'A || (!A && B)' is equivalent to 'A || B' [redundantCondition]
+  if (ri->http_version_major != 1 ||
+                                  ^
+mongoose.c:4647:24: style: Condition 'ctx->stop_flag!=2' is always true [knownConditionTrueFalse]
+ while (ctx->stop_flag != 2)
+                       ^
+mongoose.c:4644:19: note: Assignment 'ctx->stop_flag=1', assigned value is 1
+ ctx->stop_flag = 1;
+                  ^
+mongoose.c:4647:24: note: Condition 'ctx->stop_flag!=2' is always true
+ while (ctx->stop_flag != 2)
+                       ^
+mongoose.c:1805:8: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'mon[32]'. [invalidScanfFormatWidth_smaller]
+ if (((sscanf(s, "%d/%3s/%d %d:%d:%d",
+       ^
+mongoose.c:1807:7: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'mon[32]'. [invalidScanfFormatWidth_smaller]
+     (sscanf(s, "%d %3s %d %d:%d:%d",
+      ^
+mongoose.c:1809:7: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'mon[32]'. [invalidScanfFormatWidth_smaller]
+     (sscanf(s, "%*3s, %d %3s %d %d:%d:%d",
+      ^
+mongoose.c:1811:7: warning:inconclusive: Width 3 given in format string (no. 2) is smaller than destination buffer 'mon[32]'. [invalidScanfFormatWidth_smaller]
+     (sscanf(s, "%d-%3s-%d %d:%d:%d",
+      ^
+mongoose.c:2748:26: warning: %llu in format string (no. 1) requires 'unsigned long long *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+ if (hdr != NULL && (n = sscanf(hdr,
+                         ^
+mongoose.c:2748:26: warning: %llu in format string (no. 2) requires 'unsigned long long *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+ if (hdr != NULL && (n = sscanf(hdr,
+                         ^
+mongoose.c:3785:9: warning: %llu in format string (no. 9) requires 'unsigned long long' but the argument type is 'unsigned long'. [invalidPrintfArgType_uint]
+ (void) fprintf(conn->ctx->access_log,
+        ^
+mongoose.c:2383:7: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+  if (sscanf(line, "%[^:]:%[^:]:%s", f_user, domain, ha1) != 3)
+      ^
+mongoose.c:2498:7: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+  if (sscanf(line, "%[^:]:%[^:]:%*s", u, d) != 2)
+      ^
+mongoose.c:3457:6: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+ if (sscanf(tag, " virtual=\"%[^\"]\"", file_name) == 1) {
+     ^
+mongoose.c:3463:13: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+ } else if (sscanf(tag, " file=\"%[^\"]\"", file_name) == 1) {
+            ^
+mongoose.c:3469:13: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+ } else if (sscanf(tag, " \"%[^\"]\"", file_name) == 1) {
+            ^
+mongoose.c:3503:6: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+ if (sscanf(tag, " \"%[^\"]\"", cmd) != 1) {
+     ^
+mongoose.c:2492:3: error: Resource leak: fp [resourceLeak]
+  return (0);
+  ^
+mongoose.c:2641:4: error: Common realloc mistake: 'entries' nulled but not freed upon failure [memleakOnRealloc]
+   entries = (struct de *) realloc(entries,
+   ^
+mongoose.c:811:8: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ char  buf[BUFSIZ];
+       ^
+mongoose.c:812:11: style: The scope of the variable 'ap' can be reduced. [variableScope]
+ va_list  ap;
+          ^
+mongoose.c:813:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+ int  len;
+      ^
+mongoose.c:1478:10: style: The scope of the variable 'k' can be reduced. [variableScope]
+ int  n, k;
+         ^
+mongoose.c:1969:11: style: The scope of the variable 't' can be reduced. [variableScope]
+ uint32_t t;
+          ^
+mongoose.c:2314:9: style: The scope of the variable 'name' can be reduced. [variableScope]
+ char  *name, *value, *s;
+        ^
+mongoose.c:2697:6: style: The scope of the variable 'to_read' can be reduced. [variableScope]
+ int to_read, num_read, num_written;
+     ^
+mongoose.c:2697:15: style: The scope of the variable 'num_read' can be reduced. [variableScope]
+ int to_read, num_read, num_written;
+              ^
+mongoose.c:2697:25: style: The scope of the variable 'num_written' can be reduced. [variableScope]
+ int to_read, num_read, num_written;
+                        ^
+mongoose.c:2851:6: style: The scope of the variable 'n' can be reduced. [variableScope]
+ int n, request_len;
+     ^
+mongoose.c:2932:19: style: The scope of the variable 'cb' can be reduced. [variableScope]
+ struct callback *cb;
+                  ^
+mongoose.c:3393:10: style: The scope of the variable 'len' can be reduced. [variableScope]
+ size_t  len;
+         ^
+mongoose.c:3722:7: style: The scope of the variable 'is_ssl' can be reduced. [variableScope]
+ int  is_ssl;
+      ^
+mongoose.c:3816:11: style: The scope of the variable 'acl_subnet' can be reduced. [variableScope]
+ uint32_t acl_subnet, acl_mask, remote_ip;
+          ^
+mongoose.c:4207:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int   i, retval;
+       ^
+mongoose.c:4272:15: style: The scope of the variable 'option_name' can be reduced. [variableScope]
+ const char  *option_name, *option_value;
+              ^
+mongoose.c:2248:30: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+ mg_md5(ha2, method, ":", uri, NULL);
+                             ^
+mongoose.c:2250:37: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+     ":", cnonce, ":", qop, ":", ha2, NULL);
+                                    ^
+mongoose.c:2504:45: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    mg_md5(ha1, user, ":", domain, ":", pass, NULL);
+                                            ^
+mongoose.c:2514:43: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  mg_md5(ha1, user, ":", domain, ":", pass, NULL);
+                                          ^
+mongoose.c:4027:36: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+  cry(fc(ctx), "%s: cannot open %s", NULL, pem);
+                                   ^
+mongoose.c:672:61: style:inconclusive: Function 'mg_get_header' argument 2 names different: declaration 'hdr_name' definition 'name'. [funcArgNamesDifferent]
+mg_get_header(const struct mg_connection *conn, const char *name)
+                                                            ^
+mongoose.h:205:69: note: Function 'mg_get_header' argument 2 names different: declaration 'hdr_name' definition 'name'.
+const char *mg_get_header(const struct mg_connection *, const char *hdr_name);
+                                                                    ^
+mongoose.c:672:61: note: Function 'mg_get_header' argument 2 names different: declaration 'hdr_name' definition 'name'.
+mg_get_header(const struct mg_connection *conn, const char *name)
+                                                            ^
+mongoose.c:1639:15: style:inconclusive: Function 'mg_free' argument 1 names different: declaration 'var' definition 'data'. [funcArgNamesDifferent]
+mg_free(char *data)
+              ^
+mongoose.h:231:20: note: Function 'mg_free' argument 1 names different: declaration 'var' definition 'data'.
+void mg_free(char *var);
+                   ^
+mongoose.c:1639:15: note: Function 'mg_free' argument 1 names different: declaration 'var' definition 'data'.
+mg_free(char *data)
+              ^
+mongoose.c:1651:58: style:inconclusive: Function 'mg_get_var' argument 2 names different: declaration 'var_name' definition 'name'. [funcArgNamesDifferent]
+mg_get_var(const struct mg_connection *conn, const char *name)
+                                                         ^
+mongoose.h:225:60: note: Function 'mg_get_var' argument 2 names different: declaration 'var_name' definition 'name'.
+char *mg_get_var(const struct mg_connection *, const char *var_name);
+                                                           ^
+mongoose.c:1651:58: note: Function 'mg_get_var' argument 2 names different: declaration 'var_name' definition 'name'.
+mg_get_var(const struct mg_connection *conn, const char *name)
+                                                         ^
+mongoose.c:2464:62: style:inconclusive: Function 'mg_modify_passwords_file' argument 2 names different: declaration 'file_name' definition 'fname'. [funcArgNamesDifferent]
+mg_modify_passwords_file(struct mg_context *ctx, const char *fname,
+                                                             ^
+mongoose.h:119:66: note: Function 'mg_modify_passwords_file' argument 2 names different: declaration 'file_name' definition 'fname'.
+int mg_modify_passwords_file(struct mg_context *ctx, const char *file_name,
+                                                                 ^
+mongoose.c:2464:62: note: Function 'mg_modify_passwords_file' argument 2 names different: declaration 'file_name' definition 'fname'.
+mg_modify_passwords_file(struct mg_context *ctx, const char *fname,
+                                                             ^
+mongoose.c:2465:15: style:inconclusive: Function 'mg_modify_passwords_file' argument 3 names different: declaration 'user_name' definition 'user'. [funcArgNamesDifferent]
+  const char *user, const char *pass)
+              ^
+mongoose.h:120:15: note: Function 'mg_modify_passwords_file' argument 3 names different: declaration 'user_name' definition 'user'.
+  const char *user_name, const char *password);
+              ^
+mongoose.c:2465:15: note: Function 'mg_modify_passwords_file' argument 3 names different: declaration 'user_name' definition 'user'.
+  const char *user, const char *pass)
+              ^
+mongoose.c:2465:33: style:inconclusive: Function 'mg_modify_passwords_file' argument 4 names different: declaration 'password' definition 'pass'. [funcArgNamesDifferent]
+  const char *user, const char *pass)
+                                ^
+mongoose.h:120:38: note: Function 'mg_modify_passwords_file' argument 4 names different: declaration 'password' definition 'pass'.
+  const char *user_name, const char *password);
+                                     ^
+mongoose.c:2465:33: note: Function 'mg_modify_passwords_file' argument 4 names different: declaration 'password' definition 'pass'.
+  const char *user, const char *pass)
+                                ^
+mongoose.c:4204:51: style:inconclusive: Function 'mg_set_option' argument 2 names different: declaration 'opt_name' definition 'opt'. [funcArgNamesDifferent]
+mg_set_option(struct mg_context *ctx, const char *opt, const char *val)
+                                                  ^
+mongoose.h:104:52: note: Function 'mg_set_option' argument 2 names different: declaration 'opt_name' definition 'opt'.
+int mg_set_option(struct mg_context *, const char *opt_name, const char *value);
+                                                   ^
+mongoose.c:4204:51: note: Function 'mg_set_option' argument 2 names different: declaration 'opt_name' definition 'opt'.
+mg_set_option(struct mg_context *ctx, const char *opt, const char *val)
+                                                  ^
+mongoose.c:4204:68: style:inconclusive: Function 'mg_set_option' argument 3 names different: declaration 'value' definition 'val'. [funcArgNamesDifferent]
+mg_set_option(struct mg_context *ctx, const char *opt, const char *val)
+                                                                   ^
+mongoose.h:104:74: note: Function 'mg_set_option' argument 3 names different: declaration 'value' definition 'val'.
+int mg_set_option(struct mg_context *, const char *opt_name, const char *value);
+                                                                         ^
+mongoose.c:4204:68: note: Function 'mg_set_option' argument 3 names different: declaration 'value' definition 'val'.
+mg_set_option(struct mg_context *ctx, const char *opt, const char *val)
+                                                                   ^
+mongoose.c:4106:31: error: Uninitialized variable: fake [uninitvar]
+ return (check_acl(ctx, acl, &fake) != -1);
+                              ^
+mongoose.c:3951:7: style: Variable 'line' is assigned a value that is never used. [unreadVariable]
+ line = 0; /* Unused */
+      ^
+mongoose.c:631:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ return (FALSE);
+^
+mongoose.c:739:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ return (FALSE);
+^
+mongoose.c:762:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ return (FALSE);
+^
+mongoose.c:818:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if ((cb = find_callback(conn->ctx, FALSE, NULL, status)) != NULL) {
+^
+mongoose.c:2246:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:2319:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:2378:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:2394:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ return (FALSE);
+^
+mongoose.c:2452:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ int ret = FALSE;
+^
+mongoose.c:2820:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ int n, success_code = FALSE;
+^
+mongoose.c:2899:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ found = FALSE;
+^
+mongoose.c:2922:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if (found == FALSE)
+^
+mongoose.c:2980:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ add_callback(ctx, uri_regex, -1, func, FALSE, user_data);
+^
+mongoose.c:2988:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ add_callback(ctx, NULL, error_code, func, FALSE, user_data);
+^
+mongoose.c:3022:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  ret_code = FALSE;
+^
+mongoose.c:3036:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ bool_t  success_code = FALSE;
+^
+mongoose.c:3062:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+       TRUE : FALSE;
+^
+mongoose.c:3090:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   success_code = content_len == 0 ? TRUE : FALSE;
+^
+mongoose.c:3525:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ in_ssi_tag = FALSE;
+^
+mongoose.c:3530:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   in_ssi_tag = FALSE;
+^
+mongoose.c:3552:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    in_ssi_tag = FALSE;
+^
+mongoose.c:3637:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ (void) url_decode(uri, (int) strlen(uri), uri, strlen(uri) + 1, FALSE);
+^
+mongoose.c:3643:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ } else if (check_embedded_authorization(conn) == FALSE) {
+^
+mongoose.c:3650:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ } else if ((cb = find_callback(conn->ctx, FALSE, uri, -1)) != NULL) {
+^
+mongoose.c:3678:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+     substitute_index_file(conn, path, sizeof(path), &st) == FALSE) {
+^
+mongoose.c:3731:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  is_ssl = vec.ptr[vec.len - 1] == 's' ? TRUE : FALSE;
+^
+mongoose.c:3737:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:3741:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:3746:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:3922:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ int  retval = FALSE;
+^
+mongoose.c:3975:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:3992:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:4008:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ int  i, size, retval = FALSE;
+^
+mongoose.c:4010:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ if (load_dll(ctx, SSL_LIB, ssl_sw) == FALSE ||
+^
+mongoose.c:4011:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+     load_dll(ctx, CRYPTO_LIB, crypto_sw) == FALSE)
+^
+mongoose.c:4012:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:4038:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  return (FALSE);
+^
+mongoose.c:4066:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  retval = FALSE;
+^
+mongoose.c:4133:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:4227:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if (retval == FALSE)
+^
+mongoose.c:4372:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+ conn->free_post_data = FALSE;
+^
+mongoose.c:4468:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+   return (FALSE);
+^
+mongoose.c:4689:0: information: Skipping configuration 'FALSE' since the value of 'FALSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+       ctx->options[option->index]) == FALSE) {
+^
+mongoose.c:850:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ unused = NULL;
+ ^
+mongoose.c:876:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ unused = NULL;
+ ^
+mongoose.c:1113:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ mode = 0; /* Unused */
+ ^
+mongoose.c:1222:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ ctx = NULL; /* Unused */
+ ^
+mongoose.c:1238:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ flags = 0; /* Unused */
+ ^
+mongoose.c:1337:2: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+ conn = NULL; /* unused */
+ ^
+mongoose.c:2748:26: warning: %I64u in format string (no. 1) requires 'unsigned __int64 *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+ if (hdr != NULL && (n = sscanf(hdr,
+                         ^
+mongoose.c:2748:26: warning: %I64u in format string (no. 2) requires 'unsigned __int64 *' but the argument type is 'unsigned long *'. [invalidScanfArgType_int]
+ if (hdr != NULL && (n = sscanf(hdr,
+                         ^
+mongoose.c:3785:9: warning: %I64u in format string (no. 9) requires 'unsigned __int64' but the argument type is 'unsigned long'. [invalidPrintfArgType_uint]
+ (void) fprintf(conn->ctx->access_log,
+        ^
+mongoose.c:887:9: style: The scope of the variable 'now' can be reduced. [variableScope]
+ time_t now;
+        ^
+mongoose.c:1125:32: style: The scope of the variable 'basename' can be reduced. [variableScope]
+ wchar_t  wbuf[FILENAME_MAX], *basename;
+                               ^
+mongoose.c:1259:8: style: The scope of the variable 'fp' can be reduced. [variableScope]
+ FILE *fp;
+       ^
+mongoose.c:3969:15: style: union member 'Anonymous3::p' is never used. [unusedStructMember]
+ union {void *p; void (*fp)(void);} u;
+              ^
+mongoose.c:1113:7: style: Variable 'mode' is assigned a value that is never used. [unreadVariable]
+ mode = 0; /* Unused */
+      ^
+mongoose.c:1238:8: style: Variable 'flags' is assigned a value that is never used. [unreadVariable]
+ flags = 0; /* Unused */
+       ^
+mongoose.c:3819:29: error: Using argument usa that points at uninitialized variable fake [ctuuninitvar]
+ (void) memcpy(&remote_ip, &usa->u.sin.sin_addr, sizeof(remote_ip));
+                            ^
+mongoose.c:4106:19: note: Calling function check_acl, 3rd argument is uninitialized
+ return (check_acl(ctx, acl, &fake) != -1);
+                  ^
+mongoose.c:3819:29: note: Using argument usa
+ (void) memcpy(&remote_ip, &usa->u.sin.sin_addr, sizeof(remote_ip));
+                            ^
+mongoose.c:3598:0: style: The function 'mg_authorize' is never used. [unusedFunction]
+
+^
+mongoose.c:1639:0: style: The function 'mg_free' is never used. [unusedFunction]
+
+^
+mongoose.c:2464:0: style: The function 'mg_modify_passwords_file' is never used. [unusedFunction]
+
+^
+mongoose.c:2992:0: style: The function 'mg_set_auth_callback' is never used. [unusedFunction]
+
+^
+mongoose.c:2984:0: style: The function 'mg_set_error_callback' is never used. [unusedFunction]
+
+^
+mongoose.c:3941:0: style: The function 'mg_set_ssl_password_callback' is never used. [unusedFunction]
+
+^
+mongoose.c:4238:0: style: The function 'mg_show_usage_string' is never used. [unusedFunction]
+
+^
+mongoose.c:4659:0: style: The function 'mg_start' is never used. [unusedFunction]
+
+^
+mongoose.c:4642:0: style: The function 'mg_stop' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
